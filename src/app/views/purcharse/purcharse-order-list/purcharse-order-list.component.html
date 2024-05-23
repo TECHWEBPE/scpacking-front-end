@@ -1,0 +1,41 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Listado de Ordenes de Compra</strong> <small></small>
+      </c-card-header>
+      <c-card-body>
+        <table cTable hover>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Class</th>
+              <th scope="col">Heading</th>
+              <th scope="col">Heading</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (user of users; track $index) {
+            <tr>
+              <th scope="row">{{ $index + 1 }}</th>
+              <td>{{ user.color }}</td>
+              <td>{{ user.name }}</td>
+              <td>
+                {{ user.registered }}
+              </td>
+            </tr>
+
+            }@empty{
+            <tr>
+              <td colspan="4">No hay resultados</td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<pre>
+ {{productos | async | json}}
+</pre>
