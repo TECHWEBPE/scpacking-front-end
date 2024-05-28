@@ -22,8 +22,7 @@ export class AppComponent implements OnInit {
     this.titleService.setTitle(this.title);
     // iconSet singleton
     this.iconSetService.icons = { ...iconSubset };
-    //global variable
-    localStorage.setItem('urlApiService', 'https://fakestoreapi.com/products');
+    
   }
 
   ngOnInit(): void {

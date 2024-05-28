@@ -16,6 +16,18 @@ export const navItems: INavData[] = [
     title: true,
   },
   {
+    name: 'Maestros',
+    url: '/masters',
+    iconComponent: { name: 'cil-notes' },
+    children: [
+      {
+        name: 'Socio Negocio',
+        url: '/masters/ocrd',
+        icon: 'nav-icon-bullet',
+      },
+    ],
+  },
+  {
     name: 'Compras',
     url: '/purcharse',
     iconComponent: { name: 'cil-notes' },

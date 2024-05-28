@@ -5,10 +5,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class ProductsService {
+export class ProductsApiService {
   urlApiService='';
   constructor() {
-    this.urlApiService=localStorage.getItem('urlApiService')!;
+    
   }
   private readonly _http= inject(HttpClient);
   getAllProducts(): Observable<any> {

@@ -1,5 +1,6 @@
+import { OcrdsApiService } from '../../../services/api/ocrds-api.service';
 import { CommonModule } from '@angular/common';
-import { ProductsService } from './../../../api/products.service';
+import { ProductsApiService } from '../../../services/api/products-api.service';
 import { Component, inject } from '@angular/core';
 import { AlignDirective, BorderDirective, CardBodyComponent, CardComponent, CardHeaderComponent, ColComponent, RowComponent, TableActiveDirective, TableColorDirective, TableDirective, TextColorDirective } from '@coreui/angular';
 import { DocsExampleComponent } from '@docs-components/public-api';
@@ -28,12 +29,15 @@ interface IUser {
   styleUrl: './purcharse-order-list.component.scss'
 })
 export class PurcharseOrderListComponent {
-  constructor() { }
-  private readonly productsSvc= inject(ProductsService);
-  productos = this.productsSvc.getAllProducts();
 
-//public users: IUser[] | undefined;
-  public users: IUser[] = [
+  constructor() { }
+ /*  private readonly productsSvc= inject(ProductsService);
+  productos = this.productsSvc.getAllProducts(); */
+  private readonly ocrdsSrvc=inject(OcrdsApiService);
+  ocrds = this.ocrdsSrvc.getAllOcrds();
+
+public users: IUser[] | undefined;
+ /*  public users: IUser[] = [
     {
       name: 'Yiorgos Avraamu',
       state: 'New',
@@ -73,6 +77,6 @@ export class PurcharseOrderListComponent {
       status: 'warning',
       color: 'warning'
     },
-  ]
+  ] */
 
 }
