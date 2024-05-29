@@ -1,1 +1,50 @@
-<p>ocrd-list works!</p>
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Listado de Socios de Negocio</strong> <small><button cButton color="info" variant="ghost"  size="sm">Agregar</button></small>
+      </c-card-header>
+      <c-card-body>
+        <table cTable hover>
+          <thead cTableColor="light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Codigo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Moneda</th>
+              <th scope="col">Documento</th>
+              <th scope="col">DiasPago</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Balance</th>
+              <th scope="col">Activo</th>
+              <th scope="col">Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (ocrd of ocrd$ | async; track ocrd.id) {
+            <tr>
+              <th scope="row">{{ $index + 1 }}</th>
+              <td>{{ ocrd.CardCode }}</td>
+              <td>{{ ocrd.CardName }}</td>
+              <td>{{ ocrd.Currency }}</td>
+              <td>{{ ocrd.LicTradNum }}</td>
+              <td>{{ ocrd.ExtraDays }}</td>
+              <td>{{ ocrd.Telef }}</td>
+              <td>{{ ocrd.Email }}</td>
+              <td>{{ ocrd.Balance }}</td>
+              <td>{{ ocrd.Active }}</td>
+              <td>{{ ocrd.description }}</td>
+            </tr>
+
+            }@empty{
+            <tr>
+              <td colspan="10">No hay resultados</td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

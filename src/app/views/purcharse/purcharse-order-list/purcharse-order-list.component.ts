@@ -1,9 +1,9 @@
 import { OcrdsApiService } from '../../../services/api/ocrds-api.service';
 import { CommonModule } from '@angular/common';
-import { ProductsApiService } from '../../../services/api/products-api.service';
+//import { ProductsApiService } from '../../../services/api/products-api.service';
 import { Component, inject } from '@angular/core';
 import { AlignDirective, BorderDirective, CardBodyComponent, CardComponent, CardHeaderComponent, ColComponent, RowComponent, TableActiveDirective, TableColorDirective, TableDirective, TextColorDirective } from '@coreui/angular';
-import { DocsExampleComponent } from '@docs-components/public-api';
+//import { DocsExampleComponent } from '@docs-components/public-api';
 
 
 interface IUser {
@@ -24,7 +24,7 @@ interface IUser {
 @Component({
   selector: 'app-purcharse-order-list',
   standalone: true,
-  imports: [CommonModule,RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent, DocsExampleComponent, TableDirective, TableColorDirective, TableActiveDirective, BorderDirective, AlignDirective],
+  imports: [CommonModule,RowComponent, ColComponent, TextColorDirective, CardComponent, CardHeaderComponent, CardBodyComponent,  TableDirective, TableColorDirective, TableActiveDirective, BorderDirective, AlignDirective],
   templateUrl: './purcharse-order-list.component.html',
   styleUrl: './purcharse-order-list.component.scss'
 })

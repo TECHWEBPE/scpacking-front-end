@@ -17,12 +17,12 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Maestros',
-    url: '/masters',
+    url: '/master',
     iconComponent: { name: 'cil-notes' },
     children: [
       {
         name: 'Socio Negocio',
-        url: '/masters/ocrd',
+        url: '/master/ocrd-list',
         icon: 'nav-icon-bullet',
       },
     ],

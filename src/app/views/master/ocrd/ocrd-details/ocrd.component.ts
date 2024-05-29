@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ButtonDirective } from '@coreui/angular';
 
 @Component({
   selector: 'app-ocrd',

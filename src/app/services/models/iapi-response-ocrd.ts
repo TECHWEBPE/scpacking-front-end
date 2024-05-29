@@ -1,24 +1,18 @@
 export interface IApiResponseOcrd {
-
-    id:           number;
-    CardCode:     string;
-    CardName:     string;
-    GroupCode:    string;
-    Currency:     string;
-    LicTradNum:   string;
-    GroupNum:     string;
-    Telef:        string;
-    Email:        string;
-    Active:       number;
-    Balance:      number;
-    created_at:   Date;
-    updated_at:   Date;
-    card_type_id: number;
-   // cardtypes: CardType[];
+  id: number;
+  CardCode: string;
+  CardName: string;
+  GroupCode: string;
+  Currency: string;
+  LicTradNum: string;
+  ExtraDays: number;
+  GroupNum: string;
+  Telef: string;
+  Email: string;
+  Balance: number;
+  Active: number;
+  created_at: Date;
+  updated_at: Date;
+  card_type_id: number;
+  description: string;
 }
-
-
-/* interface CardType{
-
-}
- */
